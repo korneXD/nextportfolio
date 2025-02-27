@@ -39,7 +39,7 @@ export default function Hero() {
                 </div>
             </div>
             <span className="text-gray-200 z-10 text-md bottom-4 left-4 absolute inline-block">{"( "}0 <span className="text-white">1</span>{" )"}</span>
-            <span className="text-white z-10 absolute text-md bottom-4 right-4 inline-block uppercase tracking-wide">{new Date().getFullYear()} © Halmosi Kornél</span>
+            <span className="text-white z-10 absolute text-md bottom-4 right-4 inline-block uppercase tracking-wide">{new Date().getFullYear()} © Halmosi Kornél.</span>
         </main>
     )
 }
