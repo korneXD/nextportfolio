@@ -1,1 +1,8 @@
 @import "tailwindcss";
+
+@layer utilities {
+  .clip-menu {
+    width: max-content;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+  }
+}
