@@ -3,12 +3,11 @@
 import { FaGithub } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 import { AiFillInstagram } from "react-icons/ai";
-import Header from "../ui/header";
+import Header from "../menu/header";
 
 export default function Hero() {
     return (
         <main className="flex justify-center items-center h-screen w-full bg-black relative p-4">
-            <Header />
             <div className="absolute inset-0 z-0">
                 <div
                     className="absolute inset-0 bg-cover bg-bottom bg-no-repeat opacity-40 mix-blend-screen"
