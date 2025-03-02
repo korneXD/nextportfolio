@@ -1,12 +1,12 @@
 "use client"
 
-import Description from "@/components/description";
 import Footer from "@/components/footer/footer";
-import Projects from "@/components/projects";
-import WorksLayout from "@/components/works";
+import ContactPage from "@/components/sections/contact";
+import ContactLayout from "@/components/sections/contactlayout";
 import { useEffect } from "react";
 
-export default function Works() {
+
+export default function Contact() {
     useEffect(() => {
         (
             async () => {
@@ -16,10 +16,9 @@ export default function Works() {
         )()
     }, [])
     return (
-        <main className="flex min-h-screen w-full bg-black flex-col relative">
-            <WorksLayout />
-            <Description />
-            <Projects />
+        <main className="flex min-h-screen w-full relative justify-center items-center flex-col">
+            <ContactPage />
+            <ContactLayout />
             <Footer />
         </main>
     )

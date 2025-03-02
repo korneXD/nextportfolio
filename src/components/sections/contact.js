@@ -2,9 +2,10 @@
 
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { useLayoutEffect, useRef } from "react";
+import Socials from "../ui/socials"
 import gsap from 'gsap';
 
-export default function HeroLayout() {
+export default function ContactPage() {
     const backgroundImage = useRef(null);
     const leftText = useRef(null);
     const rightText = useRef(null);
@@ -46,12 +47,8 @@ export default function HeroLayout() {
             <div data-scroll data-scroll-speed="0.3" className="flex z-10 justify-center px-10 py-10 items-center md:items-start w-full md:w-fit h-fit absolute bottom-10 left-0 flex-col">
                 <span className="text-gray-200 uppercase text-md md:text-lg tracking-wider text-left w-full px-8 italic">Web designer</span>
                 <h1 className="text-white tracking-tighter text-5xl  md:text-7xl" style={{ fontFamily: "Arial Black" }}>
-                    <span className="inline-block transform skew-x-6">HALMOS</span>
-                    <span className="inline-block transform -skew-x-8">I</span>
-                    <span className="block">
-                        <span className="inline-block transform -skew-x-12">KORN</span>
-                        <span className="inline-block transform skew-x-12">ÉL</span>
-                    </span>
+                    <span className="inline-block transform skew-x-6">CON</span>
+                    <span className="inline-block transform -skew-x-8">TACT</span>
                 </h1>
             </div>
             <span ref={leftText} className="text-gray-200 z-10 text-sm md:text-md bottom-4 left-4 absolute inline-block">{"( "}0 <span className="text-white">1</span>{" )"}</span>
