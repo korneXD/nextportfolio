@@ -16,10 +16,12 @@ export default function Home() {
   useEffect(() => {
     (async () => {
       const LocomotiveScroll = (await import("locomotive-scroll")).default;
-      const scroll = new LocomotiveScroll({
-        el: containerRef.current,
+      const locomotiveScroll = new LocomotiveScroll({
+        el: document.querySelector('[data-scroll-container]'),
         smooth: true,
-        smoothMobile: true
+        smoothMobile: true,
+        smartphone: { smooth: true },
+        tablet: { smooth: true }
       });
       setLocomotive(scroll);
     })();
