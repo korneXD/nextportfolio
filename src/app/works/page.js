@@ -4,7 +4,6 @@ import Description from "@/components/description";
 import Footer from "@/components/footer/footer";
 import Projects from "@/components/projects";
 import WorksLayout from "@/components/works";
-import gsap from "gsap";
 import { useEffect, useRef } from "react";
 import { motion } from "motion/react"
 

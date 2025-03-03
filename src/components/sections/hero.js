@@ -17,7 +17,7 @@ export default function HeroLayout() {
             const timeline = gsap.timeline({
                 scrollTrigger: {
                     trigger: document.documentElement,
-                    scrub: true,
+                    scrub: 1,
                     start: "top",
                     end: "+=500px",
                 },
