@@ -12,25 +12,17 @@ import "locomotive-scroll/dist/locomotive-scroll.css";
 export default function Home() {
   const containerRef = useRef(null);
   const router = useRouter();
-  const [locomotive, setLocomotive] = useState(null);
 
   useEffect(() => {
-    let scroll;
-
     (async () => {
       const LocomotiveScroll = (await import("locomotive-scroll")).default;
-      scroll = new LocomotiveScroll({
+      const scroll = new LocomotiveScroll({
         el: containerRef.current,
         smooth: true,
-        smartphone: { smooth: true },
-        tablet: { smooth: true },
+        smoothMobile: true
       });
       setLocomotive(scroll);
     })();
-
-    return () => {
-      if (scroll) scroll.destroy();
-    };
   }, []);
 
   useEffect(() => {
