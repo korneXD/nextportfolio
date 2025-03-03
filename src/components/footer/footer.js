@@ -8,7 +8,7 @@ import { usePathname } from "next/navigation";
 
 gsap.registerPlugin(ScrollTrigger);
 
-export default function Footer() {
+export default function Footer({ navigateToNextPage }) {
     const textRefs = useRef([]);
     const container = useRef(null);
 
@@ -17,7 +17,7 @@ export default function Footer() {
             gsap.to(textRefs.current, {
                 opacity: 1,
                 y: 0,
-                duration: 2,
+                duration: 10,
                 stagger: 0.2,
                 scrollTrigger: {
                     trigger: container.current,
@@ -38,14 +38,14 @@ export default function Footer() {
                     <div className="flex justify-start items-center md:flex-row flex-1 gap-4 flex-col">
                         <h2 className="text-gray-400 tracking-wide uppercase text-3xl">Links</h2>
                         {menuLinks.map((e, index) => (
-                            <Link
+                            <button
                                 key={e.name}
                                 ref={(el) => (textRefs.current[index] = el)}
-                                href={e.path}
+                                onClick={() => navigateToNextPage(e.path)}
                                 className="text-gray-200 relative italic cursor-pointer tracking-wide uppercase text-3xl opacity-0 translate-y-4 transition-all hover:text-white"
                             >
                                 {e.name}
-                            </Link>
+                            </button>
                         ))}
                     </div>
                 }

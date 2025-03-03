@@ -8,7 +8,7 @@ export default function ContactLayout() {
     const contact = [{ name: "Phone", con: "+36 70 564 3467", to: "tel:+36705643467" }, { name: "Email", con: "kornexd541@gmail.com", to: "mailto:kornexd541@gmail.com" }, { name: "Github", con: "kornexd", to: "https://github.com/korneXD" }]
     return (
         <section className="flex w-full h-full md:pt-0 pt-6 md:min-h-screen flex-col justify-center items-center p-10 md:px-28 bg-black md:pb-30">
-            <h2 data-scroll data-scroll-speed="0.15" className="text-white relative text-3xl md:text-[3vw] uppercase">Contact</h2>
+            <h2 data-scroll data-scroll-speed="0.05" className="text-white relative text-3xl md:text-[3vw] uppercase">Contact</h2>
             <div className="flex flex-col relative justify-center items-center w-full">
                 {
                     contact.map((e) => (
@@ -31,13 +31,14 @@ function AnimatedText({ children }) {
             gsap.from(text.current, {
                 scrollTrigger: {
                     trigger: text.current,
-                    scrub: true,
+                    scrub: 1,
                     start: "0px bottom",
-                    end: "bottom+=250px bottom",
+                    end: "bottom+=200px bottom",
                 },
                 opacity: 0,
-                left: "-200px",
-                ease: "power3.Out"
+                left: "-100px",
+                duration: 3,
+                ease: "power1.inOut"
             })
         })
         return () => ctx.revert()

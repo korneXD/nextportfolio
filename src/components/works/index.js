@@ -17,18 +17,32 @@ export default function WorksLayout() {
             const timeline = gsap.timeline({
                 scrollTrigger: {
                     trigger: document.documentElement,
-                    scrub: true,
+                    scrub: 1,
                     start: "top",
                     end: "+=500px",
                 },
-            })
+            });
 
-            timeline
-                .from(backgroundImage.current, { clipPath: `inset(15%)` }).to(leftText.current, { x: -100 })
-                .to(rightText.current, { x: 250 }, "<");
-        })
-        return () => ctx.revert()
-    }, [])
+            timeline.from(backgroundImage.current, { clipPath: 'inset(15%)', duration: 30 })
+
+            timeline.to(leftText.current, {
+                opacity: 0,
+                x: -100,
+                duration: 3,
+                ease: "power1.inOut",
+            });
+
+            timeline.to(rightText.current, {
+                opacity: 0,
+                x: 100,
+                duration: 3,
+                ease: "power1.inOut",
+            }, "<");
+        });
+
+        return () => ctx.revert();
+    }, []);
+
     return (
         <section className="flex justify-center items-center min-h-screen w-full bg-black relative p-4 overflow-hidden">
             <div className="absolute inset-0 z-0">
@@ -42,7 +56,7 @@ export default function WorksLayout() {
                 <div className="absolute inset-0 bg-gradient-to-b from-black via-transparent to-black" />
                 <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(0,255,0,0.1),transparent_70%)]" />
             </div>
-            <div data-scroll data-scroll-speed="0.3" className="flex z-10 justify-center px-10 py-10 items-center md:items-start w-full md:w-fit h-fit absolute bottom-10 left-0 flex-col">
+            <div data-scroll data-scroll-speed="0.05" className="flex z-10 justify-center px-10 py-10 items-center md:items-start w-full md:w-fit h-fit absolute bottom-10 left-0 flex-col">
                 <span className="text-gray-200 uppercase text-md md:text-lg tracking-wider text-left w-full px-8 italic">My latest Projects</span>
                 <h1 className="text-white tracking-tighter text-5xl  md:text-7xl" style={{ fontFamily: "Arial Black" }}>
                     <span className="inline-block transform skew-x-6">WOR</span>

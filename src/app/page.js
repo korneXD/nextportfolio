@@ -62,7 +62,7 @@ export default function Home() {
     >
       <HeroLayout />
       <HomeLayout navigateToNextPage={navigateToNextPage} />
-      <Footer />
+      <Footer navigateToNextPage={navigateToNextPage} />
     </main>
   );
 }

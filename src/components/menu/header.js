@@ -42,9 +42,14 @@ export default function Header() {
     useEffect(() => {
         if (open) {
             tl.current.play();
+            document.body.style.overflow = "hidden";
         } else {
             tl.current.reverse();
+            document.body.style.overflow = "auto";
         }
+        return () => {
+            document.body.style.overflow = "auto";
+        };
     }, [open]);
 
     const path = usePathname()

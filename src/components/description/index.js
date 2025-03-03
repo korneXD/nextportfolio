@@ -26,13 +26,14 @@ function AnimatedText({ children }) {
             gsap.from(text.current, {
                 scrollTrigger: {
                     trigger: text.current,
-                    scrub: true,
+                    scrub: 1,
                     start: "0px bottom",
                     end: "bottom+=400px bottom",
                 },
                 opacity: 0,
                 left: "-200px",
-                ease: "power3.Out"
+                duration: 3,
+                ease: "power1.inOut"
             })
         })
         return () => ctx.revert()

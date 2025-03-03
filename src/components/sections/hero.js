@@ -28,14 +28,14 @@ export default function HeroLayout() {
             timeline.to(leftText.current, {
                 opacity: 0,
                 x: -100,
-                duration: 3,
+                duration: 10,
                 ease: "power1.inOut",
             });
 
             timeline.to(rightText.current, {
                 opacity: 0,
                 x: 100,
-                duration: 3,
+                duration: 10,
                 ease: "power1.inOut",
             }, "<");
         });
