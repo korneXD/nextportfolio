@@ -36,8 +36,9 @@ function AnimatedText({ children }) {
                     end: "bottom+=200px bottom",
                 },
                 opacity: 0,
-                left: "-200px",
-                ease: "power3.Out"
+                left: "-100px",
+                duration: 3,
+                ease: "power1.inOut"
             })
         })
         return () => ctx.revert()
