@@ -23,7 +23,7 @@ export default function HeroLayout() {
                 },
             });
 
-            timeline.from(backgroundImage.current, { clipPath: 'inset(15%)' })
+            timeline.from(backgroundImage.current, { clipPath: 'inset(15%)', duration: 30 })
 
             timeline.to(leftText.current, {
                 opacity: 0,
