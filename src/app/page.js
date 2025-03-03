@@ -14,19 +14,6 @@ export default function Home() {
   const router = useRouter();
 
   useEffect(() => {
-    (async () => {
-      const LocomotiveScroll = (await import("locomotive-scroll")).default;
-      const locomotiveScroll = new LocomotiveScroll({
-        el: document.querySelector('[data-scroll-container]'),
-        smooth: true,
-        smoothMobile: true,
-        smartphone: { smooth: true },
-        tablet: { smooth: true }
-      });
-    })();
-  }, []);
-
-  useEffect(() => {
     gsap.fromTo(
       containerRef.current,
       { opacity: 0, y: 20 },
