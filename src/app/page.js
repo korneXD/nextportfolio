@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef } from "react";
 import { useRouter } from "next/navigation";
 import gsap from "gsap";
 import { ScrollToPlugin } from "gsap/all";
@@ -14,15 +14,33 @@ export default function Home() {
   const router = useRouter();
 
   useEffect(() => {
-    (async () => {
-      const LocomotiveScroll = (await import("locomotive-scroll")).default;
-      const locomotiveScroll = new LocomotiveScroll({
-        el: document.querySelector('[data-scroll-container]'),
-        smooth: true,
-        smartphone: { smooth: true },
-        tablet: { smooth: true }
-      });
-    })();
+    let locomotiveScroll;
+
+    const initializeLocomotiveScroll = async () => {
+      try {
+        const LocomotiveScroll = (await import("locomotive-scroll")).default;
+        locomotiveScroll = new LocomotiveScroll({
+          el: document.querySelector('[data-scroll-container]'),
+          smooth: true, // Sima görgetés engedélyezése
+          smoothMobile: false, // Sima görgetés letiltása mobileszközökön
+          smartphone: { smooth: false }, // Sima görgetés letiltása okostelefonokon
+          tablet: { smooth: true }, // Sima görgetés engedélyezése tableteken
+        });
+
+        console.log("Locomotive Scroll initialized successfully!");
+      } catch (error) {
+        console.error("Failed to initialize Locomotive Scroll:", error);
+      }
+    };
+
+    initializeLocomotiveScroll();
+
+    return () => {
+      if (locomotiveScroll) {
+        locomotiveScroll.destroy(); // Töröljük a Locomotive Scroll példányt, ha a komponens unmountol
+        console.log("Locomotive Scroll destroyed.");
+      }
+    };
   }, []);
 
   useEffect(() => {
