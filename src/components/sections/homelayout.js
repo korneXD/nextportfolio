@@ -34,7 +34,6 @@ function AnimatedText({ children }) {
                     scrub: 1,
                     start: "0px bottom",
                     end: "bottom+=200px bottom",
-                    markers: true
                 },
                 opacity: 0,
                 left: "-100px",
