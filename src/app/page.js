@@ -1,31 +1,36 @@
 "use client";
 
+import { useEffect, useRef, useState } from "react";
+import { useRouter } from "next/navigation";
+import gsap from "gsap";
+import { ScrollToPlugin } from "gsap/all";
 import Footer from "@/components/footer/footer";
 import HeroLayout from "@/components/sections/hero";
 import HomeLayout from "@/components/sections/homelayout";
-import gsap from "gsap";
-import { ScrollToPlugin } from "gsap/all";
-import { useRouter } from "next/navigation";
-import { useEffect, useRef } from "react";
+import "locomotive-scroll/dist/locomotive-scroll.css";
 
 export default function Home() {
   const containerRef = useRef(null);
   const router = useRouter();
+  const [locomotive, setLocomotive] = useState(null);
 
   useEffect(() => {
+    let scroll;
+
     (async () => {
       const LocomotiveScroll = (await import("locomotive-scroll")).default;
-      const scroll = new LocomotiveScroll({
+      scroll = new LocomotiveScroll({
         el: containerRef.current,
         smooth: true,
-        smartphone: {
-          smooth: true,
-        },
-        tablet: {
-          smooth: true,
-        },
+        smartphone: { smooth: true },
+        tablet: { smooth: true },
       });
+      setLocomotive(scroll);
     })();
+
+    return () => {
+      if (scroll) scroll.destroy();
+    };
   }, []);
 
   useEffect(() => {
@@ -60,6 +65,7 @@ export default function Home() {
   return (
     <main
       ref={containerRef}
+      data-scroll-container
       className="flex min-h-screen justify-center items-center flex-col relative overflow-x-hidden"
     >
       <HeroLayout />
