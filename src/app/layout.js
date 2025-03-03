@@ -12,7 +12,6 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        data-scroll-container
         className={`antialiased bg-black overflow-x-hidden scroll-smooth`}
       >
         <Header />

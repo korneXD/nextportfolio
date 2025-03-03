@@ -14,6 +14,18 @@ export default function Home() {
   const router = useRouter();
 
   useEffect(() => {
+    (async () => {
+      const LocomotiveScroll = (await import("locomotive-scroll")).default;
+      const locomotiveScroll = new LocomotiveScroll({
+        el: document.querySelector('[data-scroll-container]'),
+        smooth: true,
+        smartphone: { smooth: true },
+        tablet: { smooth: true }
+      });
+    })();
+  }, []);
+
+  useEffect(() => {
     gsap.fromTo(
       containerRef.current,
       { opacity: 0, y: 20 },
@@ -46,7 +58,7 @@ export default function Home() {
     <main
       ref={containerRef}
       data-scroll-container
-      className="flex min-h-screen justify-center items-center flex-col relative overflow-x-hidden"
+      className="flex min-h-screen justify-center items-center flex-col relative"
     >
       <HeroLayout />
       <HomeLayout navigateToNextPage={navigateToNextPage} />
