@@ -8,7 +8,7 @@ export default function HomeLayout({ navigateToNextPage }) {
 
     return (
         <section className="flex w-full h-full md:min-h-screen flex-col justify-center items-center px-12 md:px-28 bg-black">
-            <h2 data-scroll data-scroll-speed="0.1" className="text-white relative text-4xl md:text-[3vw] uppercase">Links</h2>
+            <h2 data-scroll data-scroll-speed="0.05" className="text-white relative text-4xl md:text-[3vw] uppercase">Links</h2>
             <div className="flex flex-col relative justify-center items-center w-full">
                 {
                     menuLinks.map((e) => (
