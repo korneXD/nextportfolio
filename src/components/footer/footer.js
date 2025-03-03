@@ -21,6 +21,7 @@ export default function Footer() {
                 stagger: 0.2,
                 scrollTrigger: {
                     trigger: container.current,
+                    scrub: 1,
                     start: "10% bottom",
                     toggleActions: "play none none reset",
                 },

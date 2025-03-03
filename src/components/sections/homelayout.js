@@ -31,7 +31,7 @@ function AnimatedText({ children }) {
             gsap.from(text.current, {
                 scrollTrigger: {
                     trigger: text.current,
-                    scrub: true,
+                    scrub: 1,
                     start: "0px bottom",
                     end: "bottom+=200px bottom",
                 },
