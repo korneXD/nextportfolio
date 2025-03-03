@@ -7,14 +7,16 @@ import { useLayoutEffect, useRef } from "react";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import gsap from "gsap";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 gsap.registerPlugin(ScrollTrigger);
 
 export default function Socials() {
     const iconRefs = useRef([]);
     const container = useRef(null);
+    const path = usePathname()
 
-    const social = [{ icon: <FaGithub className="size-8 md:size-6" />, to: "https://github.com/korneXD" }, { icon: <FaXTwitter className="size-8 md:size-6" />, to: "https://x.com/itskorcee" }, { icon: <AiFillInstagram className="size-8 md:size-6" />, to: "https://www.instagram.com/halmosi_kornel_/" }]
+    const social = [{ icon: <FaGithub className={path == "/" ? "size-8" : "size-8 md:size-6"} />, to: "https://github.com/korneXD" }, { icon: <FaXTwitter className={path == "/" ? "size-8" : "size-8 md:size-6"} />, to: "https://x.com/itskorcee" }, { icon: <AiFillInstagram className={path == "/" ? "size-8" : "size-8 md:size-6"} />, to: "https://www.instagram.com/halmosi_kornel_/" }]
 
     useLayoutEffect(() => {
         if (container.current) {

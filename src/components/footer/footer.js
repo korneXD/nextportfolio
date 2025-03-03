@@ -31,7 +31,7 @@ export default function Footer() {
     const path = usePathname()
 
     return (
-        <footer ref={container} className="h-fit w-full px-16 py-10 *: bottom-0 left-0 flex justify-center md:justify-start items-center">
+        <footer ref={container} className="h-fit w-full px-16 py-10 bottom-0 left-0 flex justify-center md:justify-start items-center">
             <div className="flex justify-start items-center flex-col md:flex-row w-full">
                 {path != "/" &&
                     <div className="flex justify-start items-center md:flex-row flex-1 gap-4 flex-col">
@@ -48,7 +48,8 @@ export default function Footer() {
                         ))}
                     </div>
                 }
-                <div className="flex justify-center items-center md:items-end flex-col flex-1 w-full">
+                <div className={path == "/" ? "flex justify-center items-center flex-col flex-1 w-full" : "flex justify-center items-center md:items-end flex-col flex-1 w-full"
+                }>
                     <Socials />
                 </div>
             </div>
