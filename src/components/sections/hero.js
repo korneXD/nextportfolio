@@ -16,27 +16,27 @@ export default function HeroLayout() {
 
             const timeline = gsap.timeline({
                 scrollTrigger: {
-                    trigger: document.documentElement, // A trigger az egész oldalra vonatkozik
+                    trigger: document.documentElement,
                     scrub: 1,
-                    start: "top", // Animáció kezdete
-                    end: "+=500px", // Animáció vége
+                    start: "top",
+                    end: "+=500px",
                 },
             });
 
             timeline.from(backgroundImage.current, { clipPath: 'inset(15%)' })
 
-            // Animáció a bal oldali szövegre
             timeline.to(leftText.current, {
-                opacity: 0, // Átlátszóvá válik
-                x: -200, // Balra mozog ki
-                ease: "power3.in", // Lassú befejezés
+                opacity: 0,
+                x: -100,
+                duration: 3,
+                ease: "power1.inOut",
             });
 
-            // Animáció a jobb oldali szövegre
             timeline.to(rightText.current, {
-                opacity: 0, // Átlátszóvá válik
-                x: 200, // Jobbra mozog ki
-                ease: "power3.out", // Sima befejezés
+                opacity: 0,
+                x: 100,
+                duration: 3,
+                ease: "power1.inOut",
             }, "<");
         });
 
