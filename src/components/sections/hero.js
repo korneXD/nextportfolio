@@ -3,6 +3,7 @@
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { useLayoutEffect, useRef } from "react";
 import gsap from 'gsap';
+import Image from 'next/image';
 
 export default function HeroLayout() {
     const backgroundImage = useRef(null);
@@ -32,14 +33,12 @@ export default function HeroLayout() {
         <section className="flex justify-center items-center h-screen w-full bg-black relative p-4">
             <div className="absolute inset-0 z-0">
                 <div ref={backgroundImage}
-                    className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-40 mix-blend-screen"
-                    style={{
-                        backgroundImage: `url('https://5a9is5m72t.ufs.sh/f/wxlLVoZraNf9mkki6ap04fWJ0mLYh8q7cuCFGZMQtO2EIoB9')`,
-                        filter: "brightness(1.2) contrast(1.1)",
-                    }}
+                    className="absolute inset-0 bg-no-repeat opacity-40 mix-blend-screen"
                     role="img"
                     aria-label="Image of the author"
-                />
+                >
+                    <Image src="https://5a9is5m72t.ufs.sh/f/wxlLVoZraNf9mkki6ap04fWJ0mLYh8q7cuCFGZMQtO2EIoB9" fill priority unoptimized alt="Hero Image" className='object-cover contrast-[1.1] brightness-120' />
+                </div>
                 <div className="absolute inset-0 bg-gradient-to-b from-black via-transparent to-black" />
                 <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(0,255,0,0.1),transparent_70%)]" />
             </div>
