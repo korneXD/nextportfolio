@@ -15,14 +15,15 @@ export default function Home() {
   useEffect(() => {
     (async () => {
       const LocomotiveScroll = (await import("locomotive-scroll")).default;
-      const locomotiveScroll = new LocomotiveScroll({
+      const scroll = new LocomotiveScroll({
+        el: containerRef.current,
         smooth: true,
         smartphone: {
-          smooth: true
+          smooth: true,
         },
         tablet: {
-          smooth: true
-        }
+          smooth: true,
+        },
       });
     })();
   }, []);
