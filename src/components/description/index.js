@@ -7,7 +7,7 @@ const phrases = ["My latest works", "web design", "web development", "creative i
 export default function Description() {
 
     return (
-        <section className="relative text-gray-200 uppercase mt-10 ml-20 text-4xl" >
+        <section className="relative text-gray-200 uppercase mt-10 flex justify-center items-start ml-4 flex-col md:ml-20 text-4xl" >
             {
                 phrases.map((phrase, index) => {
                     return <AnimatedText key={index}>{phrase}</AnimatedText>

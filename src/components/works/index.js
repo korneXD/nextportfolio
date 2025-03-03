@@ -29,7 +29,7 @@ export default function WorksLayout() {
         return () => ctx.revert()
     }, [])
     return (
-        <section className="flex justify-center items-center h-screen w-full bg-black relative p-4 overflow-hidden">
+        <section className="flex justify-center items-center min-h-screen w-full bg-black relative p-4 overflow-hidden">
             <div className="absolute inset-0 z-0">
                 <div ref={backgroundImage}
                     className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-40 mix-blend-screen"

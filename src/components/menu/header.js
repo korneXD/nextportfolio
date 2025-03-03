@@ -52,11 +52,11 @@ export default function Header() {
     const num = path == "/" && "1" || path == "/contact" && "3" || path == "/works" && "2"
 
     return (
-        <header ref={container} className="flex justify-center items-center w-full h-fit fixed top-0 left-0 z-20">
+        <header ref={container} className="flex justify-center items-center w-full h-fit fixed top-0 left-0 z-20 ">
             <nav className="h-fit w-full flex justify-center items-center py-6 px-10">
                 <div className="flex flex-1 h-fit justify-start items-center">
-                    <button onClick={toggleMenu} className="cursor-pointer">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-8 text-gray-200">
+                    <button onClick={toggleMenu} className="cursor-pointer backdrop-blur-sm rounded-full p-2 bg-black/50">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-8 text-gray-200 ">
                             <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25H12" />
                         </svg>
                     </button>
@@ -65,18 +65,18 @@ export default function Header() {
                     <span className="text-gray-200 italic tracking-widest"></span>
                 </div>
                 <div className="flex flex-1 h-fit justify-end items-center">
-                    <span className=" text-gray-200 border tracking-wider border-gray-200 px-2 py-1 rounded-3xl uppercase">
+                    <span className=" text-gray-200 border bg-black/50 backdrop-blur-sm tracking-wider border-gray-200 px-2 py-1 rounded-3xl uppercase">
                         {path == "/" && "Home" || path == "/contact" && "Contact" || path == "/works" ? (path == "/" && "Home" || path == "/contact" && "Contact" || path == "/works" && "Works") : "404"}
                     </span>
                 </div>
             </nav>
-            <nav ref={menuOverlay} className="flex justify-center items-center bg-green-950 min-h-screen w-full absolute top-0 left-0 opacity-0">
-                <button onClick={toggleMenu} className="absolute top-6 left-10 cursor-pointer">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-8 text-gray-200">
+            <nav ref={menuOverlay} className="flex justify-center items-center bg-black min-h-screen w-full absolute top-0 left-0 opacity-0">
+                <button onClick={toggleMenu} className="absolute top-6 left-10 cursor-pointer ">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-8 text-gray-200 hover:text-white transition-all">
                         <path strokeLinecap="round" strokeLinejoin="round" d="M6 18 18 6M6 6l12 12" />
                     </svg>
                 </button>
-                <div className="flex justify-center items-start flex-col">
+                <div className="flex justify-center items-start flex-col md:gap-0 gap-2">
                     {menuLinks.map((menu, index) => (
                         <div key={menu.name} className="clip-menu">
                             <div
@@ -84,7 +84,7 @@ export default function Header() {
                                 className="relative"
                                 onClick={toggleMenu}
                             >
-                                <Link href={menu.path} className="text-gray-200 cursor-pointer tracking-wide uppercase text-3xl">
+                                <Link href={menu.path} className="text-gray-200 hover:text-white transition-all cursor-pointer tracking-wide uppercase text-3xl md:text-[3vw]">
                                     {menu.name}
                                 </Link>
                             </div>

@@ -10,7 +10,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`antialiased bg-green-950 overflow-x-hidden`}
+        className={`antialiased bg-black overflow-x-hidden`}
       >
         <Header />
         {children}
