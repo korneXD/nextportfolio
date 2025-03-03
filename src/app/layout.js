@@ -34,7 +34,7 @@ export default function RootLayout({ children }) {
       <body
         ref={container}
         data-scroll-container
-        className={`antialiased bg-black overflow-x-hidden`}
+        className={`antialiased bg-black overflow-x-hidden scroll-smooth`}
       >
         <Header />
         {children}
