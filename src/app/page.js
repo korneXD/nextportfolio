@@ -19,7 +19,6 @@ export default function Home() {
       const locomotiveScroll = new LocomotiveScroll({
         el: document.querySelector('[data-scroll-container]'),
         smooth: true,
-        smoothMobile: true,
         smartphone: { smooth: true },
         tablet: { smooth: true }
       });
@@ -59,7 +58,7 @@ export default function Home() {
     <main
       ref={containerRef}
       data-scroll-container
-      className="flex min-h-screen justify-center items-center flex-col relative"
+      className="flex min-h-screen justify-center items-center flex-col relative overflow-x-hidden"
     >
       <HeroLayout />
       <HomeLayout navigateToNextPage={navigateToNextPage} />
