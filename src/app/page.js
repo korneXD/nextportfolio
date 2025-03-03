@@ -19,6 +19,7 @@ export default function Home() {
       const locomotiveScroll = new LocomotiveScroll({
         el: document.querySelector('[data-scroll-container]'),
         smooth: true,
+        smoothMobile: true,
         smartphone: { smooth: true },
         tablet: { smooth: true }
       });
