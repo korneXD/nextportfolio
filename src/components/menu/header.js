@@ -76,7 +76,7 @@ export default function Header() {
                 </div>
             </nav>
             <nav ref={menuOverlay} className="flex justify-center items-center bg-black min-h-screen w-full absolute top-0 left-0 opacity-0">
-                <button onClick={toggleMenu} className="absolute top-6 left-10 cursor-pointer ">
+                <button onClick={toggleMenu} className="absolute top-8 left-4 md:top-8 md:left-12 cursor-pointer ">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-8 text-gray-200 hover:text-white transition-all">
                         <path strokeLinecap="round" strokeLinejoin="round" d="M6 18 18 6M6 6l12 12" />
                     </svg>
