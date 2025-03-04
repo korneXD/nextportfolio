@@ -45,7 +45,7 @@ export const metadata = {
     siteName: title,
     images: [
       {
-        url: "/opengraph-image.png",
+        url: "@/public/opengraph-image.png",
         width: 1200,
         height: 630,
         alt: title,
@@ -57,7 +57,7 @@ export const metadata = {
     card: "summary_large_image",
     title,
     description,
-    images: ["/opengraph-image.png"],
+    images: ["@/public/opengraph-image.png"],
   },
   icons: [
     {
