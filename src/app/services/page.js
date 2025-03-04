@@ -2,7 +2,7 @@ import { description } from "@/utils/constans";
 import ServicePage from "@/components/pages/services";
 
 export const metadata = {
-    title: "Services",
+    title: "Szolgáltatásaim",
     description: description,
 };
 

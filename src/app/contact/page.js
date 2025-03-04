@@ -2,7 +2,7 @@ import Contactpages from "@/components/pages/contact";
 import { description } from "@/utils/constans";
 
 export const metadata = {
-    title: "Contact",
+    title: "Elérhetőségeim",
     description: description,
 };
 

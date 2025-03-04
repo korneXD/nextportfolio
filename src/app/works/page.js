@@ -2,7 +2,7 @@ import { description } from "@/utils/constans";
 import WorksPage from "@/components/pages/works";
 
 export const metadata = {
-    title: "Works",
+    title: "Projekteim",
     description: description,
 };
 
