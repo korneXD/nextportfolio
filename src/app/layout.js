@@ -3,6 +3,8 @@ import "./globals.css";
 import { SpeedInsights } from "@vercel/speed-insights/next"
 import { Analytics } from "@vercel/analytics/react"
 import { description, title } from "@/utils/constans";
+import { NextIntlClientProvider } from 'next-intl';
+import { getLocale, getMessages } from 'next-intl/server';
 
 export const metadata = {
   title: {
@@ -78,7 +80,7 @@ export const viewport = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
+    <html lang="hu">
       <body
         className={`antialiased bg-black overflow-x-hidden scroll-smooth`}
       >
@@ -87,6 +89,6 @@ export default function RootLayout({ children }) {
         <SpeedInsights />
         <Analytics />
       </body>
-    </html>
+    </html >
   );
 }
