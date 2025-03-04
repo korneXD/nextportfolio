@@ -2,7 +2,7 @@ import HomePage from "@/components/pages/home";
 import { description } from "@/utils/constans";
 
 export const metadata = {
-  title: "Web design | Koresz.hu - web design",
+  title: "Web design | Koresz.hu",
   description: description,
 };
 
