@@ -17,7 +17,7 @@ export default function Footer({ navigateToNextPage }) {
             gsap.to(textRefs.current, {
                 opacity: 1,
                 y: 0,
-                duration: 10,
+                duration: 20,
                 stagger: 0.2,
                 scrollTrigger: {
                     trigger: container.current,

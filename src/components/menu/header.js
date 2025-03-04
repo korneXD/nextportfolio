@@ -54,11 +54,11 @@ export default function Header() {
 
     const path = usePathname()
 
-    const num = path == "/" && "1" || path == "/contact" && "3" || path == "/works" && "2"
+    const num = path == "/" && "1" || path == "/contact" && "4" || path == "/works" && "2" || path == "/services" && "3"
 
     return (
         <header ref={container} className="flex justify-center items-center w-full h-fit fixed top-0 left-0 z-20 ">
-            <nav className="h-fit w-full flex justify-center items-center py-6 px-10">
+            <nav className="h-fit w-full flex justify-center items-center py-6 px-3 md:px-10">
                 <div className="flex flex-1 h-fit justify-start items-center">
                     <button onClick={toggleMenu} className="cursor-pointer backdrop-blur-sm rounded-full p-2 bg-black/50">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-8 text-gray-200 ">
@@ -71,7 +71,7 @@ export default function Header() {
                 </div>
                 <div className="flex flex-1 h-fit justify-end items-center">
                     <span className=" text-gray-200 border bg-black/50 backdrop-blur-sm tracking-wider border-gray-200 px-2 py-1 rounded-3xl uppercase">
-                        {path == "/" && "Home" || path == "/contact" && "Contact" || path == "/works" ? (path == "/" && "Home" || path == "/contact" && "Contact" || path == "/works" && "Works") : "404"}
+                        {path == "/" && "Home" || path == "/contact" && "Contact" || path == "/works" || path == "/services" ? (path == "/" && "Home" || path == "/contact" && "Contact" || path == "/works" && "Works" || path == "/services" && "Services") : "404"}
                     </span>
                 </div>
             </nav>

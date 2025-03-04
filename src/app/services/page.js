@@ -1,15 +1,17 @@
 "use client"
 
+import Description from "@/components/description";
 import Footer from "@/components/footer/footer";
-import ContactPage from "@/components/sections/contact";
-import ContactLayout from "@/components/sections/contactlayout";
-import gsap from "gsap";
 import { useEffect, useRef } from "react";
 import { motion } from "motion/react"
-import { useRouter } from "next/navigation";
 import { ScrollToPlugin } from "gsap/all";
+import { useRouter } from "next/navigation";
+import gsap from "gsap";
+import Services from "@/components/sections/services";
+import ServicesLayout from "@/components/sections/serviceslayout";
 
-export default function Contact() {
+export default function Service() {
+
     const containerRef = useRef(null);
     const router = useRouter();
 
@@ -28,7 +30,7 @@ export default function Contact() {
     gsap.registerPlugin(ScrollToPlugin);
 
     const navigateToNextPage = (url) => {
-        if (url && url !== "/contact") {
+        if (url && url !== "/services") {
             gsap.to(window, {
                 scrollTo: { y: 0, autoKill: false },
                 duration: 2,
@@ -47,9 +49,10 @@ export default function Contact() {
     };
 
     return (
-        <motion.main data-scroll-container ref={containerRef} initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1 }} className="flex overflow-x-hidden min-h-screen w-full relative justify-center items-center flex-col">
-            <ContactPage />
-            <ContactLayout />
+        <motion.main ref={containerRef} initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 1 }} className="flex min-h-screen w-full bg-black flex-col relative">
+            <Services />
+            <Description />
+            <ServicesLayout />
             <Footer navigateToNextPage={navigateToNextPage} />
         </motion.main>
     )

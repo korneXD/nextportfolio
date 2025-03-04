@@ -49,7 +49,7 @@ export default function Works() {
     };
 
     return (
-        <motion.main ref={containerRef} initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 1 }} className="flex min-h-screen w-full bg-black flex-col relative">
+        <motion.main data-scroll-container ref={containerRef} initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 1 }} className="flex min-h-screen w-full bg-black flex-col relative">
             <WorksLayout />
             <Description />
             <Projects />
