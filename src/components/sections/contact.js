@@ -60,8 +60,8 @@ export default function ContactPage() {
                 <span className="text-gray-200 uppercase text-md md:text-lg tracking-wider text-left w-full px-8 italic">koresz web design</span>
                 <h1 className="text-white tracking-tighter text-5xl md:text-7xl font-extrabold" style={{ fontFamily: "Arial Black, Arial, sans-serif" }}
                 >
-                    <span className="inline-block transform skew-x-6">CON</span>
-                    <span className="inline-block transform -skew-x-8">TACT</span>
+                    <span className="inline-block transform skew-x-6">ELÉRHE</span>
+                    <span className="inline-block transform -skew-x-8">TŐSÉG</span>
                 </h1>
             </div>
             <span ref={leftText} className="text-gray-200 z-10 text-sm md:text-md bottom-4 left-4 absolute inline-block">{"( "}0 <span className="text-white">4</span>{" )"}</span>

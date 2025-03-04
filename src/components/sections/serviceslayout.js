@@ -6,11 +6,11 @@ import { useLayoutEffect, useRef } from "react";
 
 export default function ServicesLayout() {
 
-    const prices = [{ name: "Website building from 70.000 HUF" }, { name: "Website redesign from 50.000 HUF" }, { name: "Website optimization from 40.000 HUF" }, { name: "Website SEO from 30.000 HUF" }, { name: "Monthly maintenance from 15.000 HUF" }]
+    const prices = [{ name: "Weboldal készítés 70.000 Ft-tól" }, { name: "Weboldal újradizájnolás 50.000 Ft-tól" }, { name: "Weboldal optimalizálás 40.000 Ft-tól" }, { name: "Weboldal SEO 30.000 Ft-tól" }, { name: "Havi karbantartás 15.000 Ft-tól" }]
 
     return (
         <section className="flex w-full mt-30 h-full md:min-h-screen flex-col justify-center items-center px-12 md:px-28 bg-black">
-            <h2 data-scroll data-scroll-speed="0.05" className="text-white relative text-4xl md:text-[3vw] uppercase">Prices</h2>
+            <h2 data-scroll data-scroll-speed="0.05" className="text-white relative text-4xl md:text-[3vw] uppercase">Árak</h2>
             <div className="flex flex-col relative justify-center items-center w-full">
                 {
                     prices.map((e) => (

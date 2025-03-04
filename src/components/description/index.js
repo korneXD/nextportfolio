@@ -3,9 +3,9 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import gsap from 'gsap';
 import { usePathname } from 'next/navigation';
 
-const phrases = ["My latest works", "web design", "web development", "creative ideas", "hungary-based"]
+const phrases = ["Eddigi projekteim", "web design", "web development", "creative ideas", "hungary-based"]
 
-const services = ["Website building", "Website redesign", "Mobile first design", "Lightning fast", "Clean and creative design", "100% SEO"]
+const services = ["Weboldal készítés", "Weboldal újradizájnolás", "Weboldal optimalizálás", "Villámgyors", "Letisztult és modern design", "100% SEO"]
 
 export default function Description() {
 

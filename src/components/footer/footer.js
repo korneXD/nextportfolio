@@ -38,7 +38,7 @@ export default function Footer({ navigateToNextPage }) {
             <div className="flex justify-start items-center flex-col md:flex-row w-full">
                 {path != "/" &&
                     <div className="flex justify-start items-center md:flex-row flex-1 gap-4 flex-col">
-                        <h2 className="text-gray-400 tracking-wide uppercase text-3xl">Links</h2>
+                        <h2 className="text-gray-400 tracking-wide uppercase text-3xl">Linkek</h2>
                         {menuLinks.map((e, index) => (
                             <button
                                 key={e.name}

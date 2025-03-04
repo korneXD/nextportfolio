@@ -65,7 +65,7 @@ export default function Projects() {
                     <Link href={projects[selectedProject].url != "work in progress..." ? `https://${projects[selectedProject].url}` : "/contact"} target='_blank' className='text-white whitespace-nowrap text-3xl px-2 py-1 w-full italic bg-black z-10 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 font-semibold text-center'>{projects[selectedProject].url}</Link>
                 </div>
                 <div className="hidden md:z-0 z-10 md:flex h-full w-full md:w-[40%] text-xl md:text-[1.6vw] flex-col">
-                    <p>Check my latest works below.</p>
+                    <p>Itt láthatod eddigi projekteim.</p>
                 </div>
             </div>
 
