@@ -10,6 +10,10 @@ export default function HeroLayout() {
     const leftText = useRef(null);
     const rightText = useRef(null);
 
+    gsap.config({
+        nullTargetWarn: false
+    })
+
     useLayoutEffect(() => {
         let ctx = gsap.context(() => {
             gsap.registerPlugin(ScrollTrigger);

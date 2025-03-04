@@ -14,6 +14,10 @@ export default function Footer({ navigateToNextPage }) {
     const textRefs = useRef([]);
     const container = useRef(null);
 
+    gsap.config({
+        nullTargetWarn: false
+    })
+
     useLayoutEffect(() => {
         if (container.current) {
             gsap.to(textRefs.current, {

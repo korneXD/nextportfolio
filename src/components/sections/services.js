@@ -58,7 +58,7 @@ export default function Services() {
             </div>
             <div data-scroll data-scroll-speed="0.05" className="flex z-10 justify-center px-10 py-10 items-center md:items-start w-full md:w-fit h-fit absolute bottom-10 left-0 flex-col">
                 <span className="text-gray-200 uppercase text-md md:text-lg tracking-wider text-left w-full px-8 italic">Miben tudok segíteni?</span>
-                <h1 className="text-white tracking-tighter text-5xl md:text-7xl font-extrabold" style={{ fontFamily: "Arial Black, Arial, sans-serif" }}
+                <h1 className="text-white tracking-tighter text-[8vw] whitespace-nowrap md:text-7xl font-extrabold" style={{ fontFamily: "Arial Black, Arial, sans-serif" }}
                 >
                     <span className="inline-block transform skew-x-6">SZOLGÁL</span>
                     <span className="inline-block transform -skew-x-8">TATÁSAIM</span>
