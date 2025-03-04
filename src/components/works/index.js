@@ -65,7 +65,7 @@ export default function WorksLayout() {
                 </h1>
             </div>
             <span ref={leftText} className="text-gray-200 z-10 text-sm md:text-md bottom-4 left-4 absolute inline-block">{"( "}0 <span className="text-white">2</span>{" )"}</span>
-            <span ref={rightText} className="text-gray-200 z-10 absolute text-sm md:text-md bottom-4 right-4 inline-block uppercase tracking-wide">{new Date().getFullYear()} © Halmosi Kornél.</span>
+            <span ref={rightText} className="text-gray-200 z-10 absolute text-sm md:text-md bottom-4 right-4 inline-block uppercase tracking-wide">{new Date().getFullYear()} © koresz.hu</span>
         </section>
     )
 }

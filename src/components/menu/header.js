@@ -98,7 +98,7 @@ export default function Header() {
                 </div>
                 <span className="text-gray-200 z-10 text-sm md:text-md bottom-4 left-4 absolute inline-block">{"( "}0 <span className="text-gray-200">{num}</span>{" )"}</span>
                 <span className="text-gray-200 z-10 absolute text-sm md:text-md bottom-4 right-4 inline-block uppercase tracking-wide">
-                    {new Date().getFullYear()} © Halmosi Kornél.
+                    {new Date().getFullYear()} © koresz.hu
                 </span>
             </nav>
         </header>

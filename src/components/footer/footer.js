@@ -1,3 +1,5 @@
+"use client"
+
 import { menuLinks } from "@/utils/constans";
 import Link from "next/link";
 import Socials from "../ui/socials";
