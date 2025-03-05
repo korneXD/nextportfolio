@@ -80,7 +80,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="hu">
       <body
-        className={`antialiased bg-black overflow-x-hidden scroll-smooth`}
+        className={`antialiased bg-black scroll-smooth`}
       >
         <Header />
         {children}

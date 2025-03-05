@@ -1,6 +1,6 @@
 export const menuLinks = [
     { name: "Főoldal", path: "/" },
-    { name: "Projekteim", path: "/works" },
+    { name: "Referenciák", path: "/works" },
     { name: "Szolgáltatásaim", path: "/services" },
     { name: "Elérhetőség", path: "/contact" },
 ];

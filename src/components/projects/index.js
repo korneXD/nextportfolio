@@ -62,7 +62,7 @@ export default function Projects() {
                         unoptimized
                         className='object-cover grayscale'
                     />
-                    <Link href={projects[selectedProject].url != "work in progress..." ? `https://${projects[selectedProject].url}` : "/contact"} target='_blank' className='text-white whitespace-nowrap text-3xl px-2 py-1 w-full italic bg-black z-10 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 font-semibold text-center'>{projects[selectedProject].url}</Link>
+                    <Link href={projects[selectedProject].url != "work in progress..." ? `https://${projects[selectedProject].url}` : "/contact"} target='_blank' className='text-white whitespace-nowrap text-3xl px-2 py-1 w-full italic bg-black absolute top-1/2 z-[3] left-1/2 transform -translate-x-1/2 -translate-y-1/2 font-semibold text-center'>{projects[selectedProject].url}</Link>
                 </div>
                 <div className="hidden md:z-0 z-10 md:flex h-full w-full md:w-[40%] text-xl md:text-[1.6vw] flex-col">
                     <p>Itt láthatod eddigi projekteim.</p>
@@ -72,8 +72,8 @@ export default function Projects() {
             <div className="flex flex-col relative">
                 {
                     projects.map((project, index) => {
-                        return <div key={index} onClick={() => { setSelectedProject(index) }} className="w-full text-gray-200 uppercase  flex justify-end text-2xl md:text-[3vw]">
-                            <h2 className='md:px-0 px-2 mt-[40px] mb-[20px] whitespace-nowrap cursor-pointer border-b border-gray-200 md:w-[60%] text-right w-full'>{project.title}</h2>
+                        return <div key={index} onClick={() => { setSelectedProject(index) }} className="w-full text-gray-200 uppercase  flex justify-end text-2xl md:text-[3vw] mt-10 z-[1]">
+                            <h2 className='md:px-0 px-2 mb-[20px] whitespace-nowrap cursor-pointer border-b border-gray-200 md:w-[60%] text-right w-full'>{project.title}</h2>
                         </div>
                     })
                 }
