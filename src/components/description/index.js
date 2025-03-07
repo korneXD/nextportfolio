@@ -3,7 +3,7 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import gsap from 'gsap';
 import { usePathname } from 'next/navigation';
 
-const phrases = ["Eddigi projekteim", "web design", "web development", "creative ideas", "hungary-based"]
+const phrases = ["Referenciáim", "web design", "web development", "creative ideas", "hungary-based"]
 
 const services = ["Weboldal készítés", "Weboldal újradizájnolás", "Weboldal optimalizálás", "Villámgyors", "Letisztult és modern design", "100% SEO"]
 

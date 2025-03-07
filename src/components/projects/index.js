@@ -16,8 +16,8 @@ const projects = [
         url: "kornelflix.netlify.app",
     },
     {
-        title: "Blog",
-        url: "kornexd.netlify.app",
+        title: "Elite Car Kecskemét",
+        url: "elitecardetail.vercel.app",
     },
     {
         title: "You need a website",

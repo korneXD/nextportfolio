@@ -71,7 +71,7 @@ export default function Header() {
                 </div>
                 <div className="flex flex-1 h-fit justify-end items-center">
                     <span className=" text-gray-200 border bg-black/50 backdrop-blur-sm tracking-wider border-gray-200 px-2 py-1 rounded-3xl uppercase">
-                        {path == "/" && "Home" || path == "/contact" && "Contact" || path == "/works" || path == "/services" ? (path == "/" && "Főoldal" || path == "/contact" && "Elérhetőség" || path == "/works" && "Projekteim" || path == "/services" && "Szolgáltatásaim") : "404"}
+                        {path == "/" || path == "/contact" || path == "/works" || path == "/services" ? (path == "/" && "Főoldal" || path == "/contact" && "Elérhetőség" || path == "/works" && "Referenciák" || path == "/services" && "Szolgáltatásaim") : "404"}
                     </span>
                 </div>
             </nav>
